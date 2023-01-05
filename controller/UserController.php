@@ -11,7 +11,7 @@ function getUserById()
     echo json_encode($obj_respuesta);
     // devolver la respuesta como json
   } else {
-    echo json_encode("oe pero pa k po");
+    echo json_encode("Error msg");
     // mandar mensaje de error en json
   }
 }
@@ -51,7 +51,7 @@ function deleteUserById() {
     }
     // devolver la respuesta como json
   } else {
-    echo json_encode("oe pero pa k po");
+    echo json_encode("error message");
     // mandar mensaje de error en json
   }
 }
@@ -68,7 +68,7 @@ function addNewUser() {
     }
     // devolver la respuesta como json
   } else {
-    echo json_encode("oe pero pa k po");
+    echo json_encode("Error msg");
     // mandar mensaje de error en json
   }
 }
@@ -79,13 +79,13 @@ function changeUsername() {
     $idUser = $_POST["idUser"];
     $check = changeUsernameById($idUser, $newUsername);
     if ($check == false) {
-      echo json_encode("Error, comiste");
+      echo json_encode("Error msg");
     } else {
     echo json_encode("user changed succesfully");
     }
     // devolver la respuesta como json
   } else {
-    echo json_encode("oe pero pa k po");
+    echo json_encode("Error msg");
     // mandar mensaje de error en json
   }
 }
